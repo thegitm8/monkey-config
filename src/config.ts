@@ -1,5 +1,4 @@
 import * as _ from 'lodash';
-process.env.SOMETHING_ELSE = 'bla';
 
 const ENVS = { ...process.env };
 
@@ -41,7 +40,7 @@ function requiredEnvVar(envVar) {
 
 }
 
-class Config {
+export class Config {
 
   config = {};
 
@@ -77,13 +76,4 @@ class Config {
 
 }
 
-const config = new Config();
-
-const test = config
-  .cast('something', 'SOMETHING', config.toArray)
-  .castRequired('anotherThing', 'SOMETHING_ELSE')
-  .set('aKey.with.subkey', 123)
-  .seal();
-
-console.log(test);
-
+export default new Config();
