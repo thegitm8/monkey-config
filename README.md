@@ -1,4 +1,4 @@
-# monkey-log
+# monkey-config
 
 ## config
 The config module provides a simple way to convert environment variables into a configuration object. It also allows you to convert values to have more flexibility when working with environment variables.
