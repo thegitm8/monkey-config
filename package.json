@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run clear && tsc",
     "build:watch": "tsc --watch",
-    "prepare": "npm run clear && npm run build && npm run test",
+    "preversion": "npm run clear && npm run build && npm run test",
     "test": "nyc -s mocha --recursive dist/test",
     "clear": "rimraf dist coverage .nyc_output"
   },
