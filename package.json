@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thegitm8/twelve-monkeys.git"
+    "url": "git+https://github.com/thegitm8/monkey-config.git"
   },
   "keywords": [
     "config",
@@ -23,9 +23,9 @@
   "author": "Doc <mail@antlike.tech>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/thegitm8/twelve-monkeys/issues"
+    "url": "https://github.com/thegitm8/monkey-config/issues"
   },
-  "homepage": "https://github.com/thegitm8/twelve-monkeys#readme",
+  "homepage": "https://github.com/thegitm8/monkey-config#readme",
   "devDependencies": {
     "@types/lodash": "^4.14.106",
     "@types/mocha": "^5.0.0",
