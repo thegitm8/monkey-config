@@ -1,5 +1,4 @@
-# twelve-monkeys
-tbd
+# monkey-log
 
 ## config
 The config module provides a simple way to convert environment variables into a configuration object. It also allows you to convert values to have more flexibility when working with environment variables.
@@ -48,16 +47,3 @@ const myConfig = config
   .cast('anArray', 'MEANT_TO_BE_AN_ARRAY', toArary)
 
 ```
-
-## logger
-
-### Log levels
-
-level|description
----|---
-trace|Fine granular step of application execution.
-debug|Messages that contain information normally of use only when debugging a program.
-info|Informational messages.
-warn|Warning condition.
-error|Error condition from which the application is able to recover.
-fatal|Application flow cannot recover from this error.
