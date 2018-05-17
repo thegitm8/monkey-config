@@ -54,9 +54,14 @@ export function throwMissingEnvVarError(envVar) {
 
 }
 
-export function cast(key: string, env: string, transform?) {
+export interface options {
+  transform?: (value: string) => any;
+  default?: any;
+}
 
-  const value = transform ? transform(this.envs[env]) : this.envs[env];
+export function cast(key: string, env: string, options: options = {}) {
+  const value = typeof options.transform === 'function'   ? options.transform(this.envs[env])
+    : this.envs[env];
 
   setAtPath(this.config, key, value || undefined);
 
