@@ -168,7 +168,7 @@ describe('src/index.ts', () => {
         envs: { TEST_ENV_VAR: '42' },
       };
 
-      cast.call(context, 'test', 'TEST_ENV_VAR', toNumber);
+      cast.call(context, 'test', 'TEST_ENV_VAR', { transform: toNumber });
 
       assert.deepEqual(context.config['test'], 42);
 
@@ -184,6 +184,19 @@ describe('src/index.ts', () => {
       cast.call(context, 'test', 'ENV_VAR_THAT_DOES_NOT_EXIST');
 
       assert.isUndefined(context.config['test']);
+    });
+
+    it('casts to a default value if env var doesn\'t exist and default is given', () => {
+
+      const context = {
+        config: {},
+        envs: {},
+      };
+
+      cast.call(context, 'test', 'NON_EXISTENT_ENV_VAR', { default: 'foo' });
+
+      assert.deepEqual(context.config['test'], 'foo');
+
     });
 
   });
