@@ -54,10 +54,14 @@ export function throwMissingEnvVarError(envVar) {
 
 }
 
-export interface options {
+export interface baseOptions {
   transform?: (value: string) => any;
+}
+
+export interface options extends baseOptions {
   default?: any;
 }
+
 
 export function cast(key: string, env: string, options: options = {}) {
   const value = typeof options.transform === 'function'
@@ -70,13 +74,13 @@ export function cast(key: string, env: string, options: options = {}) {
 
 }
 
-export function castRequired(key, env, transform?) {
+export function castRequired(key, env, options: baseOptions = {}) {
 
   if (!this.envs[env]) {
     throwMissingEnvVarError(env);
   }
 
-  return this.cast(key, env, transform);
+  return this.cast(key, env, options);
 
 }
 
