@@ -1,19 +1,16 @@
-# monkey-config
-
 `monkey-config` provides a simple way to convert environment variables into a configuration object. The goal is to make your application [controllable via the environment](https://12factor.net/config) and at the same time make it easy to work with the values provided by the environment.
 
 <!-- TOC -->
 
-- [monkey-config](#monkey-config)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [General](#general)
-    - [mapping environment variables](#mapping-environment-variables)
-    - [options](#options)
-      - [transform](#transform)
-      - [defaults](#defaults)
-    - [full example](#full-example)
-  - [test](#test)
+- [Install](#install)
+- [Usage](#usage)
+  - [General](#general)
+  - [mapping environment variables](#mapping-environment-variables)
+  - [options](#options)
+    - [transform](#transform)
+    - [defaults](#defaults)
+  - [full example](#full-example)
+- [test](#test)
 
 <!-- /TOC -->
 
