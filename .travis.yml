@@ -3,12 +3,6 @@ node_js:
   - "6"
   - "8"
 
-before_install:
-  - npm i -g npm
-
-install:
-  - npm ci
-
 script:
   - npm run build
   - npm test
