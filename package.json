@@ -5,9 +5,9 @@
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "npm run clear && tsc",
+    "build": "npm --silent run clear && tsc",
     "build:watch": "tsc --watch",
-    "preversion": "npm run clear && npm run build && npm run test",
+    "preversion": "npm --silent run clear && npm --silent run build && npm run test",
     "postversion": "git push origin master --tags && npm publish",
     "test": "nyc -s mocha --recursive dist/test",
     "clear": "rimraf dist coverage .nyc_output"
