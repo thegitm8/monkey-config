@@ -8,7 +8,7 @@
     "build": "npm --silent run clear && tsc",
     "build:watch": "tsc --watch",
     "preversion": "npm --silent run clear && npm --silent run build && npm run test",
-    "postversion": "git push origin master --tags && npm publish",
+    "postversion": "git push origin master --tags",
     "test": "nyc -s mocha --recursive dist/test",
     "clear": "rimraf dist coverage .nyc_output"
   },

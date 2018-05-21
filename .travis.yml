@@ -1,12 +1,24 @@
 language: node_js
 node_js:
-  - "6"
-  - "8"
+- '6'
+- '8'
 
 cache:
   directories:
-    - "node_modules"
+  - node_modules
 
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
+
+deploy:
+  provider: npm
+  email: npm@antlike.tech
+  api_key:
+    secure: iB2v5SUSnQELrCCYA6EdsxE8ezW9GtlMTd8a12aELfFillNIp25NydtZKlalVbXs+wsKpDTdf3xAe4jiTl30pug019RroLqMATyAhAaX6Q+QsiBOXMvKZMSUYoC8JxQqPC2Z32nNGjwPF6h+zzlDkuSdnQcVeH2qjsWaed6Uc/LKdCpRDrqoiqn1bnJlEPEMXTM6wKy7hyAEymEyTq8MBW1lS6iggAFPIelnpQJgFwgN2YJDo33PFQOByXRmvD5pS7h18y38DMVQ23XTtt6orKuc5zWMxMuUXuev/J+lWhNu3vUS7BH3t5IYdc/6p4MZ22U+5R8gGtPjcXxh8t9k4KOV1VNcHPjqK795fVxSpo4Bm1kj5jM0AgHng+bfugjlESTepIhlJ0GQOUfv1BVb0iLkzLSJMR5GMlUt0UfhYX5vCVLQU6q/71YSDIYqimXvI8LzlWe4ZC6y6voJjBaPLjXePJGUpEldLtBhRvj1NHptPue4izbQCtmG1qULKc8q/XIJSbqIERk6opQrHSVoVeB0JGN6NkTZjVHeJZKzs/F3L0MhlBR1KIDIPtHkPq826milmkKpf3CRivj50tIQGiDtjowbgCkLVkBhpUJvs8IHimHK+IgMUgPugulGzckpz3SygxC1oTeInNvw8MYTuJIE/8Z3YW/nfHYXcyqCF6o=
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
+    node: '8'
+    repo: thegitm8/monkey-config
