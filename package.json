@@ -10,7 +10,9 @@
     "preversion": "npm --silent run clear && npm --silent run build && npm run test",
     "postversion": "git push origin master --tags",
     "test": "nyc -s mocha --recursive dist/test",
-    "clear": "rimraf dist coverage .nyc_output"
+    "clear": "rimraf dist coverage .nyc_output",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,8 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
-    "lodash": "^4.17.5"
-  }
+    "lodash": "^4.17.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
